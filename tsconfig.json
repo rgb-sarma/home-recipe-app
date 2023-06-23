@@ -1,0 +1,48 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"module": "ESNext",
+		"target": "ESNext",
+		"lib": ["DOM", "ESNext"],
+		"strict": true,
+		"esModuleInterop": true,
+		"jsx": "preserve",
+		"skipLibCheck": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"noUnusedLocals": true,
+		"strictNullChecks": true,
+		"forceConsistentCasingInFileNames": true,
+		"types": ["vite/client", "node", "@intlify/unplugin-vue-i18n/messages"],
+		"paths": {
+			"@/components/*": ["src/components/*"],
+			"@/views/*": ["src/views/*"],
+			"@/*": ["src/*"],
+			"~/*": ["src/*"]
+		},
+		"importHelpers": true,
+		"allowSyntheticDefaultImports": true,
+		"allowJs": false,
+		"useDefineForClassFields": true,
+		"sourceMap": true,
+		"isolatedModules": true
+	},
+	"vueCompilerOptions": {
+		"plugins": ["@volar/vue-language-plugin-pug"]
+	},
+	"exclude": ["dist", "node_modules", "cypress", "scripts"],
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue",
+		"test/**/*.ts",
+		"./.eslintrc.js",
+		"./vite.config.ts"
+	],
+	"references": [
+		{
+			"path": "./tsconfig.node.json"
+		}
+	]
+}

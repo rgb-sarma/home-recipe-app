@@ -1,0 +1,148 @@
+textarea {
+	padding: 5px 0 0;
+	height: $input-height;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="search"],
+textarea {
+	padding: 0 10px 0 2px;
+	border-radius: $input-radius;
+	color: white;
+	font-size: 14px;
+	outline: none;
+	background-color: transparent;
+	text-indent: 10px;
+	border: 1px solid;
+	border-color: #42474a;
+	min-height: $input-height;
+	text-overflow: ellipsis;
+
+	&::placeholder {
+		color: $text-placeholder;
+		transition: opacity 0.2s ease;
+		opacity: 0.8;
+	}
+
+	&:focus {
+		// border-image-slice: 1;
+
+		&::placeholder {
+			color: lighten($color: $text-placeholder, $amount: 10);
+			opacity: 1;
+		}
+	}
+
+	&.disabled,
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+}
+
+button,
+.btn {
+	$btn-back: $app-accent-color1;
+	$button-border-radius-mini: 6px;
+
+	font-family: inherit;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	padding: 4px 16px;
+	margin-bottom: 0;
+	font-weight: 500;
+	font-size: 12px;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	touch-action: manipulation;
+	user-select: none;
+	background: $btn-back;
+	background-image: none;
+	border: thin solid;
+	border-color: transparent;
+	border-radius: $button-border-radius-mini;
+	transition: background 0.2s ease, color 0.2s ease;
+	outline: rgb(123 255 0);
+
+	&:hover {
+		background: lighten($color: $btn-back, $amount: 5);
+	}
+
+	&:disabled {
+		opacity: 0.7;
+	}
+
+	&:not(:disabled) {
+		cursor: pointer;
+	}
+
+	&.gray {
+		background-color: #464a4c;
+		color: white;
+	}
+}
+
+.input-group {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0 5px;
+	gap: 10px;
+
+	> span:first-child {
+		color: $text-light-color;
+		min-width: 100px;
+		user-select: none;
+	}
+
+	.input-holder {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		align-self: stretch;
+		overflow: hidden;
+	}
+
+	input:not([type="checkbox"]),
+	textarea {
+		width: 100%;
+		font-size: 12px;
+	}
+}
+
+// === Mixins ===
+// Vue 2/3 Compat
+@mixin fade-transition($transDur: 0.2s) {
+	.fade-enter-active,
+	.fade-leave-active {
+		transition: opacity $transDur ease;
+	}
+
+	.fade-enter,
+	.fade-enter-from,
+	.fade-leave-to {
+		opacity: 0;
+	}
+}
+
+// Vue 2/3 Compat
+@mixin scale-fade-transition($transDur: 0.2s, $scaleFact: 0.9) {
+	.scale-fade-enter-active,
+	.scale-fade-leave-active {
+		transition: transform $transDur ease, opacity $transDur ease;
+	}
+
+	.scale-fade-enter,
+	.scale-fade-enter-from,
+	.scale-fade-leave-to {
+		transform: scale($scaleFact);
+		opacity: 0;
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"extends": [
+		"stylelint-config-standard-scss",
+		"stylelint-config-css-modules",
+		"stylelint-config-recommended-vue/scss",
+		"stylelint-config-recommended-vue"
+	],
+	"rules": {
+		"at-rule-no-unknown": [
+			true,
+			{
+				"ignoreAtRules": ["function", "if", "else", "each", "include", "mixin"]
+			}
+		],
+		"function-no-unknown": null,
+		"no-empty-source": null,
+		"value-keyword-case": null,
+		"selector-class-pattern": null,
+		"scss/no-global-function-names": null
+	}
+}

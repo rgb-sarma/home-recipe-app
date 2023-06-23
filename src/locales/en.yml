@@ -1,0 +1,11 @@
+app:
+  hello: Hello world
+  logo: Logo
+  menu: Menu
+  login: Login
+  header: Header
+  footer: Footer
+  banner: Banner
+  homepage: Homepage
+  other: Other
+  contact: Contact

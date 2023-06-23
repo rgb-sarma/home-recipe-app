@@ -1,0 +1,11 @@
+build
+coverage
+dist
+node_modules
+.eslintrc-auto-import.json
+auto-imports.d.ts
+components.d.ts
+src/generated/*
+*lock.yaml
+*lock.json
+*.min.js

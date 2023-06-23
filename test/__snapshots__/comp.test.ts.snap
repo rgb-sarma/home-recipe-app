@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`mount component 1`] = `
+"<div data-v-17198171=\\"\\" id=\\"fake-api\\" count=\\"4\\">
+  <div data-v-17198171=\\"\\" class=\\"store-example\\">
+    <div data-v-17198171=\\"\\" class=\\"counter\\">Counter: 0</div><button data-v-17198171=\\"\\">Increment store</button>
+  </div>
+  <div data-v-17198171=\\"\\" class=\\"test-count\\">3 x 2 = 6</div>
+  <div data-v-17198171=\\"\\" class=\\"test-btn\\">x1</div>
+</div>"
+`;

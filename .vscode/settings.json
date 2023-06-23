@@ -1,0 +1,56 @@
+{
+  "editor.formatOnSave": true,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.foldingStrategy": "indentation",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "stylelint.validate": ["css", "scss", "vue"],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "volar.inlayHints.eventArgumentInInlineHandlers": false,
+  "testing.automaticallyOpenPeekView": "never"
+}

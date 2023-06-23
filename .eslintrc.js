@@ -1,0 +1,147 @@
+module.exports = {
+	env: {
+		browser: true,
+		es2022: true,
+	},
+	extends: [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:vue/vue3-recommended",
+		"plugin:vue-pug/vue3-recommended",
+		"./src/generated/.eslintrc-auto-import.json",
+		"@vue/eslint-config-typescript",
+		"prettier",
+	],
+	overrides: [],
+	parser: "vue-eslint-parser",
+	parserOptions: {
+		parser: "@typescript-eslint/parser",
+		ecmaVersion: "latest",
+		sourceType: "module",
+		project: ["./tsconfig.json"],
+		extraFileExtensions: [".vue"],
+	},
+	plugins: ["@typescript-eslint", "promise", "vue", "no-storage"],
+	ignorePatterns: [
+		".eslintrc.js",
+		"auto-imports.d.ts",
+		".eslintrc-auto-import.json",
+		"components.d.ts",
+	],
+	rules: {
+		"@typescript-eslint/naming-convention": [
+			"error",
+			{
+				selector: "interface",
+				format: ["PascalCase"],
+				custom: {
+					regex: "[A-Z]",
+					match: true,
+				},
+			},
+			{
+				selector: "typeAlias",
+				format: ["PascalCase"],
+				custom: {
+					regex: "[A-Z]",
+					match: true,
+				},
+			},
+			{
+				selector: "class",
+				format: ["PascalCase"],
+				custom: {
+					regex: "[A-Z]",
+					match: true,
+				},
+			},
+		],
+		"vue/require-prop-types": "off",
+		"no-debugger": "off",
+		"no-var": "error",
+		eqeqeq: "off",
+		quotes: "off",
+		"dot-location": "off",
+		"one-var": "off",
+		"space-before-function-paren": [
+			"error",
+			{
+				anonymous: "ignore",
+				named: "never",
+				asyncArrow: "ignore",
+			},
+		],
+		"space-in-parens": "warn",
+		"template-curly-spacing": "off",
+		indent: "off",
+		"linebreak-style": "off",
+		camelcase: "off",
+		"no-prototype-builtins": "off",
+		"no-unused-vars": "off",
+		"lines-between-class-members": "off",
+		"no-return-await": "off",
+		"@typescript-eslint/lines-between-class-members": "off",
+		"@typescript-eslint/ban-ts-comment": "off",
+		"@typescript-eslint/no-unused-vars": "off",
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/strict-boolean-expressions": "off",
+		"@typescript-eslint/prefer-nullish-coalescing": "off",
+		"@typescript-eslint/array-type": [
+			"error",
+			{
+				default: "array",
+			},
+		],
+		"@typescript-eslint/no-unnecessary-type-assertion": [
+			"error",
+			{ typesToIgnore: ["HTMLElement", "HTMLElement[]", "HTMLElement | null"] },
+		],
+		"@typescript-eslint/consistent-type-assertions": ["off"],
+		"@typescript-eslint/return-await": ["error", "in-try-catch"],
+		"@typescript-eslint/no-explicit-any": [
+			"off",
+			{
+				fixToUnknown: false,
+				ignoreRestArgs: true,
+			},
+		],
+		"@typescript-eslint/no-empty-function": "off",
+		"@typescript-eslint/consistent-type-imports": [
+			"error",
+			{
+				prefer: "type-imports",
+				disallowTypeAnnotations: false,
+				fixStyle: "inline-type-imports",
+			},
+		],
+		"import/no-duplicates": "off",
+		semi: [2, "always"],
+		"comma-dangle": [
+			"error",
+			{
+				objects: "always-multiline",
+				arrays: "ignore",
+				imports: "ignore",
+				exports: "ignore",
+				functions: "ignore",
+			},
+		],
+		"vue/attribute-hyphenation": "off",
+		"vue/html-self-closing": "off",
+		"vue/no-mutating-props": "off",
+		"vue/max-attributes-per-line": [
+			"error",
+			{
+				singleline: 6,
+				multiline: {
+					max: 1,
+				},
+			},
+		],
+		"no-storage/no-browser-storage": 2,
+		"vue-pug/no-pug-control-flow": 2,
+		"promise/prefer-await-to-then": "error",
+		"promise/prefer-await-to-callbacks": "off",
+		"promise/no-multiple-resolved": "error",
+	},
+};
